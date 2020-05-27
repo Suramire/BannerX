@@ -16,14 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad1");
+    //采用代码加载方式
     BannerX *banner = [BannerX new];
     banner.frame = CGRectMake(0, 0, self.view.frame.size.width, 0);
     [self.view addSubview:banner];
     NSArray *array = [NSArray arrayWithObjects:@"a", @"b", nil];
-    [banner bannerArray: array];
-//    [self.banner aaa];
-    NSLog(@"viewDidLoad2");
+    [banner bannerArraywithString: array];
 }
 
 

@@ -18,7 +18,7 @@
 
 
 
-- (void)bannerArray:(NSArray *)array{
+- (void)bannerArraywithString:(NSArray *)array{
     self.imgArray = array;
     [self initView];
 }
@@ -35,7 +35,7 @@
     self.imageSize = self.scrollView.frame.size;
     NSInteger count = [self.imgArray count];
     for (int i = 0; i< count; i++) {
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"img_0%d",i+1]]];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self.imgArray objectAtIndex:i]]];
         imageView.frame = CGRectMake(width * i, 0, width, height);
         [self.scrollView addSubview:imageView];
     }

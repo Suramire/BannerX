@@ -19,8 +19,8 @@
     BannerX *banner = [BannerX new];
     banner.frame = CGRectMake(0, 0, self.view.frame.size.width, 0);
 //    [self.view addSubview:banner];
-    NSArray *array = [NSArray arrayWithObjects:@"a", @"b", nil];
-    [banner bannerArray: array];
+    NSArray *array = [NSArray arrayWithObjects:@"img_01", @"img_03", nil];
+    [banner bannerArraywithString: array];
     self.tableView.tableHeaderView = banner;
     if (@available(iOS 11.0, *)) {
            self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

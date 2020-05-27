@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (copy, nonatomic) NSArray *imgArray;
-- (void)bannerArray:(NSArray *)array;
+- (void)bannerArraywithString:(NSArray *)array;//以图片文件名的方式加载
 @end
 
 
