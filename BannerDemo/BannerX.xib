@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerX">
+            <connections>
+                <outlet property="pageControl" destination="Vs4-sb-3jd" id="WL6-PB-KHG"/>
+                <outlet property="scrollView" destination="09d-vG-WRa" id="qoQ-Uw-06I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-T2-NtN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09d-vG-WRa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                        </scrollView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vs4-sb-3jd">
+                            <rect key="frame" x="187.5" y="184" width="39" height="37"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="09d-vG-WRa" secondAttribute="trailing" id="2JL-b3-YuB"/>
+                        <constraint firstItem="09d-vG-WRa" firstAttribute="top" secondItem="Dea-T2-NtN" secondAttribute="top" id="4SO-G6-7dI"/>
+                        <constraint firstItem="09d-vG-WRa" firstAttribute="leading" secondItem="Dea-T2-NtN" secondAttribute="leading" id="K3J-QX-0uK"/>
+                        <constraint firstItem="Vs4-sb-3jd" firstAttribute="centerX" secondItem="Dea-T2-NtN" secondAttribute="centerX" id="lwZ-ZL-WJ1"/>
+                        <constraint firstAttribute="width" secondItem="Dea-T2-NtN" secondAttribute="height" multiplier="16:9" id="oNN-pm-pU1"/>
+                        <constraint firstAttribute="bottom" secondItem="Vs4-sb-3jd" secondAttribute="bottom" constant="12" id="p6f-BK-VIk"/>
+                        <constraint firstAttribute="bottom" secondItem="09d-vG-WRa" secondAttribute="bottom" id="vsx-T9-GVx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dea-T2-NtN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Ix2-7o-1hk"/>
+                <constraint firstItem="Dea-T2-NtN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PeA-fU-yf0"/>
+                <constraint firstItem="Dea-T2-NtN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ypd-GO-gXl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="100.00000000000001" y="-152.34375"/>
+        </view>
+    </objects>
+</document>
