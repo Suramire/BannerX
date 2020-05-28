@@ -34,9 +34,13 @@
 - (void)setupScrollView{
     self.imageSize = self.scrollView.frame.size;
     NSInteger count = [self.imgArray count];
+    
     for (int i = 0; i< count; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self.imgArray objectAtIndex:i]]];
+        imageView.tag = i;
         imageView.frame = CGRectMake(width * i, 0, width, height);
+        imageView.userInteractionEnabled = YES;
+        [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
         [self.scrollView addSubview:imageView];
     }
     //设置scrollview的内容按一整页滚动
@@ -56,9 +60,14 @@
     }
 }
 
+- (void)imageClick:(UITapGestureRecognizer *)sender {
+    if([self.delegate respondsToSelector:@selector(bannerDidSelectedatIndex:)]){
+        [self.delegate bannerDidSelectedatIndex:sender.view.tag];
+    }
+}
+
 
 - (void)setupTimer{
-    NSLog(@"setupTimer");
     if(!self.scrollTimer){
         self.scrollTimer = [NSTimer scheduledTimerWithTimeInterval:2.5f target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
     }
@@ -93,6 +102,7 @@
 }
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    //停止手动滑动后开始定时播放
     [self setupTimer];
 }
 
