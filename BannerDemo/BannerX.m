@@ -17,31 +17,56 @@
 @implementation BannerX
 
 
-
 - (void)bannerArraywithString:(NSArray *)array{
     self.imgArray = array;
-    [self initView];
+    [self setupScrollView];
 }
 
 - (void)initView{
     UIView *view = [[[NSBundle mainBundle] loadNibNamed:@"BannerX" owner:self options:nil] firstObject];
-    [self setupScrollView];
+//    [self setupScrollView];
     [self addSubview:view];
 }
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        NSLog(@"initWithCoder");
+        [self initView];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        NSLog(@"initWithFrame");
+        [self initView];
+    }
+    return self;
+}
+
+
+
 
 
 
 - (void)setupScrollView{
     self.imageSize = self.scrollView.frame.size;
     NSInteger count = [self.imgArray count];
-    
     for (int i = 0; i< count; i++) {
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[self.imgArray objectAtIndex:i]]];
         imageView.tag = i;
         imageView.frame = CGRectMake(width * i, 0, width, height);
         imageView.userInteractionEnabled = YES;
         [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
+//        UILabel *label = [UILabel new];
+//        label.frame = CGRectMake(width * i, height - 40, width, 40);
+//        label.text = @"文字";
         [self.scrollView addSubview:imageView];
+//        [self.scrollView addSubview:label];
     }
     //设置scrollview的内容按一整页滚动
     self.scrollView.pagingEnabled = YES;
@@ -97,7 +122,7 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    //手动滑动时停止timer
+    //手动滑动时停止
     [self removeTimer];
 }
 

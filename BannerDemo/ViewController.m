@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BannerX.h"
 @interface ViewController () <BannerDeleagate>
+
 @property (weak, nonatomic) IBOutlet BannerX *banner;
 
 @end
@@ -17,17 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //采用代码加载方式
-//    BannerX *banner = [BannerX new];
-//    banner.frame = CGRectMake(0, 0, self.view.frame.size.width, 0);
-//    [self.view addSubview:banner];
     NSArray *array = [NSArray arrayWithObjects:@"img_01", @"img_03", nil];
     [self.banner bannerArraywithString: array];
     self.banner.delegate = self;
 }
 
 - (void)bannerDidSelectedatIndex:(NSInteger)index{
-    NSLog(@"banner %d",index);
+    NSLog(@"banner点击位置 %d",index);
 }
 
 @end

@@ -14,23 +14,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ko1-py-xBa" customClass="BannerX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1k-yX-pLn" customClass="BannerX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ko1-py-xBa" secondAttribute="height" multiplier="16:9" id="3dU-FU-hiK"/>
+                                    <constraint firstAttribute="width" secondItem="Z1k-yX-pLn" secondAttribute="height" multiplier="16:9" id="hGs-cZ-oa5"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ko1-py-xBa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1oB-hd-tWK"/>
-                            <constraint firstAttribute="trailing" secondItem="ko1-py-xBa" secondAttribute="trailing" id="8FD-wb-7Ht"/>
-                            <constraint firstItem="ko1-py-xBa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HEQ-XA-pU6"/>
+                            <constraint firstAttribute="trailing" secondItem="Z1k-yX-pLn" secondAttribute="trailing" id="Efe-Kv-PIf"/>
+                            <constraint firstItem="Z1k-yX-pLn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nke-f6-wY3"/>
+                            <constraint firstItem="Z1k-yX-pLn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="V34-wl-CiV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="banner" destination="ko1-py-xBa" id="58e-yE-Nsv"/>
+                        <outlet property="banner" destination="Z1k-yX-pLn" id="AJO-UB-pfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
