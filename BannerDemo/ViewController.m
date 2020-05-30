@@ -18,9 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *array = [NSArray arrayWithObjects:@"img_01", @"img_03", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"img_01",@"img_02", @"img_03", @"img_04", @"img_05", nil];
     [self.banner bannerArraywithString: array];
     self.banner.delegate = self;
+
+    
+    
 }
 
 - (void)bannerDidSelectedatIndex:(NSInteger)index{

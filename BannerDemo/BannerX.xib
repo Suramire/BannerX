@@ -24,7 +24,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
                         </scrollView>
                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vs4-sb-3jd">
-                            <rect key="frame" x="187.5" y="184" width="39" height="37"/>
+                            <rect key="frame" x="351" y="196" width="39" height="37"/>
                         </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,9 +32,9 @@
                         <constraint firstAttribute="trailing" secondItem="09d-vG-WRa" secondAttribute="trailing" id="2JL-b3-YuB"/>
                         <constraint firstItem="09d-vG-WRa" firstAttribute="top" secondItem="Dea-T2-NtN" secondAttribute="top" id="4SO-G6-7dI"/>
                         <constraint firstItem="09d-vG-WRa" firstAttribute="leading" secondItem="Dea-T2-NtN" secondAttribute="leading" id="K3J-QX-0uK"/>
-                        <constraint firstItem="Vs4-sb-3jd" firstAttribute="centerX" secondItem="Dea-T2-NtN" secondAttribute="centerX" id="lwZ-ZL-WJ1"/>
+                        <constraint firstAttribute="trailing" secondItem="Vs4-sb-3jd" secondAttribute="trailing" constant="24" id="QQQ-Fm-xK8"/>
                         <constraint firstAttribute="width" secondItem="Dea-T2-NtN" secondAttribute="height" multiplier="16:9" id="oNN-pm-pU1"/>
-                        <constraint firstAttribute="bottom" secondItem="Vs4-sb-3jd" secondAttribute="bottom" constant="12" id="p6f-BK-VIk"/>
+                        <constraint firstAttribute="bottom" secondItem="Vs4-sb-3jd" secondAttribute="bottom" id="p6f-BK-VIk"/>
                         <constraint firstAttribute="bottom" secondItem="09d-vG-WRa" secondAttribute="bottom" id="vsx-T9-GVx"/>
                     </constraints>
                 </view>

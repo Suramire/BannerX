@@ -1,5 +1,8 @@
 # BannerX
 iOS 封装常用banner组件
+
+![效果图](https://tva1.sinaimg.cn/large/007S8ZIlgy1gfaawctatqj30u01sx4qp.jpg)
+
 ## 简介
 banner界面采用xib布局，目前仅支持使用图片名作为参数
 支持纯代码与stroyBoard调用

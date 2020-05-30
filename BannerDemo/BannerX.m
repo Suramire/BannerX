@@ -62,11 +62,13 @@
         imageView.frame = CGRectMake(width * i, 0, width, height);
         imageView.userInteractionEnabled = YES;
         [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
-//        UILabel *label = [UILabel new];
-//        label.frame = CGRectMake(width * i, height - 40, width, 40);
-//        label.text = @"文字";
+        UILabel *label = [UILabel new];
+        label.textColor = [UIColor whiteColor];
+        label.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5f];
+        label.frame = CGRectMake(width * i, height - 40, width, 40);
+        label.text = @"文字";
         [self.scrollView addSubview:imageView];
-//        [self.scrollView addSubview:label];
+        [self.scrollView addSubview:label];
     }
     //设置scrollview的内容按一整页滚动
     self.scrollView.pagingEnabled = YES;
